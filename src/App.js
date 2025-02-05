@@ -1,26 +1,32 @@
 import React from 'react';
+import HeloWorld from './componentes/HeloWorld.js';
+import SayMiNani from './componentes/SayMiNani.js';
+import Pessoa from './componentes/Pessoa';
+import Fase from './componentes/Fase.js';
+import List from './componentes/list.js';
 import './App.css';
 
 function App() {
 
-  const name = 'Matheus Borges Da Silva'
-
-  const newName = name.toUpperCase()
-
-  function sum (a, b) {
-    return a + b
-  }
-
-  const url = "https://via.placeholder.com/150"
-
+  const nome = 'maria'
   return (
-    <div className='App'>
-      <h2>alterando JSX</h2>
-      <p> ola, {newName}</p>
-      <p> soma: {sum(1,2)} </p>
-      <img src={url} alt='minha imagem'></img>
+    <div className='App' >
+      <h1>Testando css</h1>
+      <Fase />
+      <Fase />
+      <HeloWorld />
+      <SayMiNani nome="mathues" />
+      <SayMiNani nome="Joao" />
+      <SayMiNani nome={nome} />
+      <Pessoa
+      nome="bruno" 
+      idade="30" 
+      profissao="progamador" 
+      foto="https://www.google.com/url"/>
+    <List />
     </div>
   );
 }
 
 export default App;
+ 
